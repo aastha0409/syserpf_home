@@ -15,7 +15,10 @@ class ImageAndIcons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: kDefaultPadding * 3),
+      padding: const EdgeInsets.only(
+        bottom: 30,
+        top: 50,
+      ),
       child: SizedBox(
         height: size.height * 0.8,
         child: Row(
@@ -23,21 +26,23 @@ class ImageAndIcons extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: kDefaultPadding * 3),
+                    const EdgeInsets.symmetric(vertical: kDefaultPadding * 5),
                 child: Column(
                   children: <Widget>[
                     Align(
                       alignment: Alignment.topLeft,
-                      child: IconButton(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                        icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
+                      // child: IconCard(icon: "assets/icons/icon_4.svg"),
+                      // child: IconButton(
+                      //   padding:
+                      //       EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                      //   icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
+                      // onPressed: () {
+                      //    Navigator.pop(context);
+                      // },
+                      //   ),
                     ),
-                    Spacer(),
+                    // IconCard(icon: "assets/icons/icon_4.svg"),
+                    // Spacer(),
                     IconCard(icon: "assets/icons/sun.svg"),
                     IconCard(icon: "assets/icons/icon_2.svg"),
                     IconCard(icon: "assets/icons/icon_3.svg"),
@@ -46,6 +51,8 @@ class ImageAndIcons extends StatelessWidget {
                 ),
               ),
             ),
+            // Padding(padding: EdgeInsets.only(top: 10.0)),
+            // Spacer(),
             Container(
               height: size.height * 0.8,
               width: size.width * 0.75,
@@ -63,7 +70,12 @@ class ImageAndIcons extends StatelessWidget {
                 ],
                 image: DecorationImage(
                   alignment: Alignment.centerLeft,
+
                   fit: BoxFit.cover,
+
+                  // Padding:
+                  //            EdgeInsets.symmetric(horizontal: kDefaultPadding),
+
                   image: AssetImage("assets/images/img.png"),
                 ),
               ),
